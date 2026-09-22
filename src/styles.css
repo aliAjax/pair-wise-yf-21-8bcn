@@ -220,3 +220,431 @@ input {
     padding: 24px;
   }
 }
+
+/* ---------- 取送暂存台 ---------- */
+
+select {
+  width: 100%;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  background: #ffffff;
+  font: inherit;
+  color: #172033;
+}
+
+.field-label {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.process-block {
+  margin-top: 16px;
+}
+
+.process-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.process-picker button {
+  min-height: 34px;
+  padding: 0 12px;
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  background: color-mix(in srgb, var(--accent) 7%, #ffffff);
+}
+
+.process-picker button.picked {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.custom-process {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-top: 10px;
+  max-width: 360px;
+}
+
+.alert {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.alert.reject {
+  border: 1px solid #b91c1c;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.alert.reject ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.alert.success {
+  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: #115e59;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ghost {
+  padding: 0 14px;
+  color: #526071;
+}
+
+button.small {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.primary.small {
+  padding: 0 12px;
+}
+
+.chips button.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.reset-line {
+  margin: 14px 0 18px;
+}
+
+.linklike {
+  min-height: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--secondary);
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.panel-hint {
+  margin: 0;
+  color: #8a97a8;
+  font-size: 13px;
+}
+
+/* 暂存位 */
+
+.slot-side h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.slot-grid.compact {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.slot {
+  display: grid;
+  gap: 2px;
+  padding: 9px 10px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.slot b {
+  font-size: 13px;
+}
+
+.slot span {
+  color: #64748b;
+}
+
+.slot.free {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.slot.busy {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.slot.busy span {
+  color: #b91c1c;
+}
+
+/* 指标 */
+
+.metrics strong em {
+  font-style: normal;
+  font-size: 16px;
+  color: #8a97a8;
+}
+
+/* 工单卡片 */
+
+.count-tag {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 22px;
+  margin-left: 8px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 12%, #ffffff);
+  color: var(--primary);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 14px;
+}
+
+.order-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+  border-left: 4px solid var(--accent);
+}
+
+.order-card.overdue {
+  border-left-color: #b91c1c;
+}
+
+.order-card.picked,
+.order-card.picked-record {
+  border-left-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.order-head h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-meta {
+  margin: 0;
+  color: #526071;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.order-dates {
+  display: grid;
+  gap: 4px;
+  text-align: right;
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.date-overdue {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.active {
+  background: color-mix(in srgb, var(--accent) 14%, #ffffff);
+  color: #115e59;
+}
+
+.badge.overdue {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.picked {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: #e7edf5;
+  overflow: hidden;
+}
+
+.progress-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+}
+
+.process-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.process-list label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  font-size: 13px;
+}
+
+.process-list input[type="checkbox"] {
+  width: auto;
+  min-height: 0;
+  margin: 0;
+}
+
+.process-list span.done {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+/* 改期 */
+
+.reschedule {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+}
+
+.reschedule label {
+  font-size: 12px;
+  gap: 4px;
+}
+
+.reschedule input {
+  min-height: 34px;
+}
+
+.reschedule-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.inline-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+.history {
+  font-size: 13px;
+}
+
+.history ol {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.history li {
+  color: #526071;
+  line-height: 1.6;
+}
+
+.history li b {
+  color: #172033;
+}
+
+.history li span {
+  margin-left: 8px;
+  color: #8a97a8;
+  font-size: 12px;
+}
+
+.history li p {
+  margin: 2px 0 0;
+}
+
+.readonly-note {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.archive-panel {
+  margin-top: 18px;
+}
+
+@media (max-width: 860px) {
+  .order-head {
+    flex-direction: column;
+  }
+
+  .order-dates {
+    text-align: left;
+  }
+
+  .process-list {
+    grid-template-columns: 1fr;
+  }
+}
